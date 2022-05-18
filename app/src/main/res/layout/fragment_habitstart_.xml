@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.home.Habitstart_Fragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:id="@+id/linearstart"
+            android:background="@drawable/br_hatbit_item"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:id="@+id/imagestart"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/fly"
+                android:layout_height="100dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:textSize="12sp"
+                android:textColor="@color/gray"
+                android:fontFamily="@font/font1"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"
+                android:text="Bạn đang không thực hiện thói quen nào!"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:textSize="18sp"
+                android:textColor="@color/gray"
+                android:fontFamily="@font/font1"
+                android:gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_height="wrap_content"
+                android:text="Hãy bắt đầu nào !!"
+                />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="60dp"
+            android:id="@+id/recycllerstart"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>

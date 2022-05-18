@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="viewmodel"
+            type="com.trungnvdev.goodhabits.ui.habits.HabitVewModel" />
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    tools:context=".ui.calender.Date_Fragment"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    >
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@null"
+        android:layout_gravity="right"
+        android:src="@drawable/ic_backleft"
+        android:id="@+id/imageleft"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/monthYearTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Feb 2021"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:fontFamily="@font/font1"
+        android:layout_marginLeft="20dp"
+        android:textColor="#CCFFFFFF"
+        android:textSize="15sp"
+        />
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/imageright"
+        android:src="@drawable/ic_bacright"
+        android:background="@null"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="CN"
+        android:fontFamily="@font/font1"
+        android:gravity="center"
+        android:textColor="@color/gray"
+        android:textAlignment="center"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="T2"
+        android:fontFamily="@font/font1"
+        android:gravity="center"
+        android:textColor="@color/gray"
+        android:textAlignment="center"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="T3"
+        android:fontFamily="@font/font1"
+        android:gravity="center"
+        android:textColor="@color/gray"
+        android:textAlignment="center"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="T4"
+        android:fontFamily="@font/font1"
+        android:gravity="center"
+        android:textColor="@color/gray"
+        android:textAlignment="center"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="T5"
+        android:fontFamily="@font/font1"
+        android:gravity="center"
+        android:textColor="@color/gray"
+        android:textAlignment="center"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="T6"
+        android:fontFamily="@font/font1"
+        android:gravity="center"
+        android:textColor="@color/gray"
+        android:textAlignment="center"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="T7"
+        android:fontFamily="@font/font1"
+        android:gravity="center"
+        android:textColor="@color/gray"
+        android:textAlignment="center"
+        android:textSize="12sp"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/calendarRecyclerView"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
+</layout>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:bind="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="viewmodel"
+            type="com.trungnvdev.goodhabits.ui.habits.HabitVewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/background"
+       >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/background2"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:paddingTop="20dp"
+                        android:background="@color/colorTransBg2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="50dp"
+                        android:fontFamily="@font/font1"
+                        android:gravity="bottom|left"
+                        android:paddingBottom="10dp"
+                        android:text="Bắu đầu thói quen mới nào"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:scrollbars="none"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/fab_add"
+                                android:background="@drawable/br_addhatbit"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/ic_add"
+                                android:padding="10dp"
+                                app:navAction="@{@id/action_create}"
+                                app:rippleColor="@color/teal_700"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|left"
+                                android:text="Tạo thói quen mới...."
+                                android:textSize="15sp"
+                                android:id="@+id/textvewadd"
+                                android:layout_gravity="center"
+                                android:textColor="#FFFFFF"
+                                android:padding="15dp"
+                                android:fontFamily="@font/font1"
+                                />
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/white"
+                            android:text="Đã tạo"
+                            android:id="@+id/createnew"
+                            android:fontFamily="@font/font1"
+                            android:textSize="12sp"
+                            android:layout_marginLeft="16dp"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/recycllerview1">
+                        </androidx.recyclerview.widget.RecyclerView>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/white"
+                            android:text="Gợi ý"
+                            android:id="@+id/suggest"
+                            android:fontFamily="@font/font1"
+                            android:textSize="12sp"
+                            android:layout_marginLeft="16dp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/white"
+                            android:text="Học tập"
+                            android:id="@+id/education"
+                            android:fontFamily="@font/font1"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="16dp"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/recycllerview2">
+                        </androidx.recyclerview.widget.RecyclerView>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/white"
+                            android:text="Sống lành mạnh"
+                            android:id="@+id/health"
+                            android:fontFamily="@font/font1"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="16dp"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/recycllerview3">
+                        </androidx.recyclerview.widget.RecyclerView>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/white"
+                            android:text="Rèn luyện sức khỏe"
+                            android:id="@+id/sport"
+                            android:fontFamily="@font/font1"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="16dp"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/recycllerview4">
+                        </androidx.recyclerview.widget.RecyclerView>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/white"
+                            android:text="Kỷ luật"
+                            android:id="@+id/organizing"
+                            android:fontFamily="@font/font1"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="16dp"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_marginBottom="25dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/recycllerview5">
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                    </LinearLayout>
+                </ScrollView>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>
+
+

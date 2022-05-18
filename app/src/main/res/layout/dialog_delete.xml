@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/br_dialogstart"
+    android:layout_margin="20dp"
+    android:id="@+id/dialog_day"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:text="Bạn muốn xóa thói quen đã tạo ?"
+        android:gravity="center"
+        android:textColor="@color/black_primary"
+        android:textSize="18sp"
+        android:fontFamily="@font/font1"
+        android:layout_height="wrap_content"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="Hủy"
+            android:gravity="center"
+            android:id="@+id/edittexxtday"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:fontFamily="@font/font1"
+            android:background="@drawable/br_hatbit_item"
+            android:layout_height="50dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="Xác nhận"
+            android:gravity="center"
+            android:id="@+id/bt_ok"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:fontFamily="@font/font1"
+            android:background="@drawable/br_itembt"
+            android:layout_height="50dp"/>
+    </LinearLayout>
+</LinearLayout>

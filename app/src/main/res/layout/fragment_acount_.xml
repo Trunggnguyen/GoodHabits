@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/relat"
+    tools:context=".ui.home.Acount_Fragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/max1"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/br_hatbit_item"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="20dp"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/profile_image"
+                    android:layout_width="56dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="66dp"
+                    android:src="@drawable/ic_add"
+                    app:civ_border_width="0dp"
+                    />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="14sp"
+                        android:layout_marginTop="30dp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/font1"
+                        android:layout_width="match_parent"
+                        android:id="@+id/goodnight"
+                        android:layout_height="wrap_content"
+                        android:text="Chào buổi tối !"/>
+                    <TextView
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:layout_width="match_parent"
+                        android:id="@+id/name"
+                        android:layout_marginBottom="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/font1"
+                        />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+                <ImageView
+                    android:layout_width="25dp"
+                    android:src="@drawable/ic_edit"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="10dp"
+                    android:id="@+id/icedit"
+                    android:layout_height="25dp"
+                    />
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="10"
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:textSize="12sp"
+                    android:textColor="#DCDCDC"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/font2"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="9"
+                    android:id="@+id/quote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:layout_weight="1"
+                    android:layout_width="30dp"
+                    android:src="@drawable/ic_copy"
+                    android:id="@+id/ic_copy"
+                    android:layout_height="30dp"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:textSize="10sp"
+                android:textColor="@color/white"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/font1"
+                android:id="@+id/date"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textStyle="italic"
+                android:text="28/02/2000"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/font1"
+            android:id="@+id/textss"
+            android:layout_below="@+id/max1"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content"
+            android:text="Thói quen của bạn!"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="80dp"
+            />
+
+</RelativeLayout>

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="viewmodel"
+            type="com.trungnvdev.goodhabits.ui.home.HomeViewModel" />
+    </data>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:id="@+id/drawerlayout"
+        android:layout_below="@+id/toolbaracc"
+        android:layout_height="match_parent"
+      >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+           >
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                >
+                <com.google.android.material.appbar.AppBarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                  >
+
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:layout_width="match_parent"
+                    android:startColor="#20F8FF"
+                    android:layout_height="match_parent"
+                    android:id="@+id/coorlayout"
+                    android:layout_marginBottom="?attr/actionBarSize"
+                    tools:context=".Activity.Pace_Activity">
+
+                    <com.google.android.material.appbar.AppBarLayout
+                        android:id="@+id/appbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00454545"
+                        android:fitsSystemWindows="true"
+                        >
+
+                        <com.google.android.material.appbar.CollapsingToolbarLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fitsSystemWindows="true"
+                            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+                            android:id="@+id/collaps">
+                            <androidx.appcompat.widget.Toolbar
+                                android:layout_width="match_parent"
+                                android:id="@+id/toolbarmain"
+                                app:layout_collapseMode="pin"
+                                android:layout_height="?attr/actionBarSize">
+                            </androidx.appcompat.widget.Toolbar>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="?attr/actionBarSize"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/framelayoutacount">
+                            </FrameLayout>
+
+                        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+                    </com.google.android.material.appbar.AppBarLayout>
+
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/framelayoutstart">
+                        </FrameLayout>
+
+                    </androidx.core.widget.NestedScrollView>
+
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/fab_margin"
+                    android:gravity="center_vertical"
+                    android:clipToPadding="false"
+                    app:layout_behavior=".util.anim.MoveUpwardBehavior"
+                    android:padding="@dimen/standard_12"
+                    android:layout_marginBottom="@dimen/fab_margin"
+                    android:layout_gravity="bottom|end">
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fabopen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|end"
+                        app:navAction="@{@id/action_choiec}"
+                        android:gravity="center_vertical"
+                        app:srcCompat="@drawable/ic_add"
+                        app:backgroundTint="@color/yellow_800"
+                        app:rippleColor="@color/gray_light"
+                        app:fabSize="normal"/>
+                </LinearLayout>
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        </RelativeLayout>
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationview"
+            android:background="@drawable/br_nav"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:background="@color/yellow_800"
+                    android:layout_height="150dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:background="#041E50"
+                        android:layout_height="40dp"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/place"
+                            android:layout_width="wrap_content"
+                            android:layout_height="80dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:lottie_rawRes="@raw/wave" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="10dp"
+                        android:id="@+id/imagelogo"
+                        android:src="@mipmap/ic_launcher"
+                        android:layout_height="50dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="18dp"
+                        android:fontFamily="@font/font1"
+                        android:text="GoodHabits"
+                        android:layout_toRightOf="@+id/imagelogo"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_height="1dp">
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    android:id="@+id/linetime"
+                    android:orientation="horizontal"
+                    android:gravity="start|center"
+                    android:background="@drawable/br_but_nav"
+                    android:layout_height="40dp">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_alarm"
+                        android:layout_height="20dp"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:text="Nhắc nhở hàng ngày "
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/font1"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="10sp"
+                            android:id="@+id/timesss"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/font1"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    android:id="@+id/lineintro"
+                    android:orientation="horizontal"
+                    android:gravity="start|center"
+                    android:background="@drawable/br_but_nav"
+                    android:layout_height="40dp">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_intro"
+                        android:layout_height="20dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:text="Giới thiệu "
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/font1"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    android:id="@+id/linefeedback"
+                    android:orientation="horizontal"
+                    android:gravity="start|center"
+                    android:background="@drawable/br_but_nav"
+                    android:layout_height="40dp">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_feedback"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Đóng góp phản hồi "
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/font1"/>
+
+                </LinearLayout>
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                    android:id="@+id/linestar"
+                android:orientation="horizontal"
+                android:gravity="start|center"
+                android:background="@drawable/br_but_nav"
+                android:layout_height="40dp">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_star"
+                        android:layout_height="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="Đánh giá "
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/font1"/>
+
+            </LinearLayout>
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                    android:id="@+id/linenfo"
+                android:orientation="horizontal"
+                android:gravity="start|center"
+                android:background="@drawable/br_but_nav"
+                android:layout_height="40dp">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_info"
+                        android:layout_height="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="Thông tin ứng dụng "
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/font1"/>
+
+            </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_height="10dp">
+                </RelativeLayout>
+            </LinearLayout>
+
+        </com.google.android.material.navigation.NavigationView>
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</layout>

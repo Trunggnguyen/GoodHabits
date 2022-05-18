@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+        <variable
+            name="viewmodel"
+            type="com.trungnvdev.goodhabits.ui.habits.CreateHatbit_ViewModel" />
+        <variable
+            name="listener"
+            type="com.trungnvdev.goodhabits.ui.habits.CreateActionListener" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorTransBg">
+
+
+                <LinearLayout
+                    android:id="@+id/background2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <androidx.appcompat.widget.Toolbar
+                            android:id="@+id/toolbar"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:paddingTop="20dp"
+                            android:background="@color/colorTransBg2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_marginLeft="50dp"
+                            android:fontFamily="@font/font1"
+                            android:gravity="bottom|left"
+                            android:paddingBottom="10dp"
+                            android:text="Bắu đầu thói quen mới nào"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/titlechallen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/br_addhatbit"
+                        android:fontFamily="@font/font1"
+                        android:hint="Tên thói quen"
+                        android:inputType="textCapSentences"
+                        android:padding="15dp"
+                        android:text="@={viewmodel.title}"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#CCCCCC"
+                        android:textSize="15sp" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textnhan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/font1"
+                                android:text="Gán nhãn"
+                                android:textColor="@color/white"
+                                android:textSize="15dp" />
+
+                            <RelativeLayout
+                                android:id="@+id/relayt"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="16dp"
+                                android:gravity="center">
+
+                                <RelativeLayout
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:gravity="center">
+
+                                    <EditText
+                                        android:id="@+id/editemoj"
+                                        android:layout_width="1dp"
+                                        android:layout_height="1dp"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/br_addhatbit"
+                                        android:editable="false"
+                                        android:gravity="center"
+                                        android:textSize="1sp" />
+                                </RelativeLayout>
+
+                                <ImageView
+                                    android:id="@+id/image_edit"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:background="@drawable/br_addhatbit"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:src="@drawable/ic_add"
+                                    android:textSize="30sp" />
+
+                                <TextView
+                                    android:id="@+id/textview_edit"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:gravity="center"
+                                    android:onClick="@{() ->listener.onClickEmoji() }"
+                                    android:text="@={viewmodel.icon}"
+                                    android:textSize="40sp" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/texttimechallen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/font1"
+                                android:text="Thời gian nhắc nhở"
+                                android:textColor="@color/white"
+                                android:textSize="15dp" />
+
+                            <TextView
+                                android:id="@+id/timechallen"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginRight="16dp"
+                                android:background="@drawable/br_addhatbit"
+                                android:fontFamily="@font/font1"
+                                android:gravity="center"
+                                android:onClick="@{() ->listener.onClickTime() }"
+                                android:text="@={viewmodel.time}"
+                                android:textColor="#FFFFFF"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/subchallen"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/br_addhatbit"
+                        android:fontFamily="@font/font1"
+                        android:gravity="start"
+                        android:hint="Mô tả"
+                        android:maxLines="20"
+                        android:padding="15dp"
+                        android:text="@={viewmodel.sub}"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#CCCCCC"
+                        android:textSize="15sp" />
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:id="@+id/viewclick"
+                    android:visibility="gone"
+                    android:onClick="@{() ->listener.onClickSub() }"
+                    android:layout_height="match_parent"/>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="26dp"
+                    android:onClick="@{() ->listener.onFabClicked() }"
+                    android:src="@drawable/ic_check"
+                    app:backgroundTint="@color/yellow_800"
+                    app:rippleColor="@color/gray_light" />
+
+                <RelativeLayout
+                    android:id="@+id/rootview2"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
+

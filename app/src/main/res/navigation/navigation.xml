@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/home_frag">
+    <fragment
+        android:id="@+id/home_frag"
+        android:name="com.trungnvdev.goodhabits.ui.home.HomeFragment"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_start"
+            app:destination="@id/splash_frag"
+            />
+        <action
+            android:id="@+id/action_choiec"
+            app:destination="@id/choiec_frag"
+
+            />
+        <action
+            android:id="@+id/action_openhabit"
+            app:destination="@id/habit_frag"
+            />
+        <action
+            android:id="@+id/action_intro"
+            app:destination="@id/intro_frag"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/splash_frag"
+        android:name="com.trungnvdev.goodhabits.ui.intro.SplashFragment"
+        android:label="Goodhabits"
+        tools:layout="@layout/fragment_splash">
+
+    </fragment>
+    <fragment
+        android:id="@+id/intro_frag"
+        android:name="com.trungnvdev.goodhabits.ui.intro.IntroFragment"
+        tools:layout="@layout/fragment_intro" >
+    </fragment>
+    <fragment
+        android:id="@+id/choiec_frag"
+        android:name="com.trungnvdev.goodhabits.ui.habits.ChoiceHabit_Fragment"
+        tools:layout="@layout/fragment_create_habts_" >
+        <action
+            android:id="@+id/action_openhabit2"
+            app:destination="@id/habit_frag"
+            />
+        <action
+            android:id="@+id/action_create"
+            app:destination="@id/create_frag"
+            />
+
+    </fragment>
+    <fragment
+        android:id="@+id/create_frag"
+        android:name="com.trungnvdev.goodhabits.ui.habits.CreateHabts_Fragment"
+        tools:layout="@layout/fragment_create_habts_" />
+    <fragment
+        android:id="@+id/habit_frag"
+        android:name="com.trungnvdev.goodhabits.ui.habits.Habit_Fragment"
+        tools:layout="@layout/fragment_habit_" />
+</navigation>
